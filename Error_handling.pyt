@@ -22,11 +22,8 @@ while ch != 12:
         print() 
         continue
     if ch < 1 or ch > 12:
-        print("Choice out of range! Please select a valid option from the menu.")
-        print()
-        print("-----------------------------------------------------------------------------------------------------------------------------------------------------------------")
-        print()
-        continue
+        raise ValueError("Choice out of range! Please select a valid option from the menu.")
+    
     if ch == 1:
         print(set1.isdisjoint(set2))
 

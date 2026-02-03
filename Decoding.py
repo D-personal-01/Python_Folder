@@ -1,11 +1,13 @@
 encoded = input("Enter encoded message: ")
-decoded = ""
 
+encoded = encoded[:-1]
+
+decoded = ""
 i = 0
-j = 0
+even = True
 
 while i < len(encoded):
-    if j % 2 == 0:
+    if even:
         decoded += chr(ord(encoded[i]) - 17)
         i += 1
     else:
@@ -18,6 +20,7 @@ while i < len(encoded):
         decoded += chr(ascii_val)
         i += 1  
 
-    j += 1
+    even = not even
 
 print(decoded)
+

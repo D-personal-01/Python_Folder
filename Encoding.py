@@ -1,3 +1,4 @@
+# Basic code for encoding a messege
 a=input("Enter the the messege to encode it: ")
 list(a)
 encoded=""

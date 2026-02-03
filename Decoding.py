@@ -1,5 +1,6 @@
-encoded = input("Enter encoded message: ")
+# Decoding code for the encoded message
 
+encoded = input("Enter encoded message: ")
 encoded = encoded[:-1]
 
 decoded = ""
@@ -23,4 +24,3 @@ while i < len(encoded):
     even = not even
 
 print(decoded)
-

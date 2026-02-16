@@ -4,7 +4,7 @@ def create():
     f=open("stud.dat","ab")
 
     roll=int(input("Enter roll number: "))
-    CGP=int(input("Enter CGP: "))
+    CGP=float(input("Enter CGP: "))
     pickle.dump([roll,CGP],f)
     
     f.close()
@@ -26,7 +26,7 @@ def display():
 #Search student record
 def search():
     f=open("stud.dat","rb")
-
+    roll=int (input("Enter the roll number of the student: "))
     try:
         while 1:
             s=pickle.load(f)
@@ -47,25 +47,52 @@ def update():
     
     try:
         while 1:
-            pos=pickle.tell()
+            pos=f.tell()
             s=pickle.load(f)
             if s[0]==roll:
-                print(f"\nRoll:{s[0]}\nCGP:{s[1]}\n")
-                cgp=int(input("Enter the new CGP: "))
-                seek()
+                print(f"\nRoll: {s[0]}\nCGP: {s[1]}\n")
+                cgp=float(input("Enter the new CGP: "))
+                f.seek(pos)
+                s[1]=cgp
+                pickle.dump(s,f)
+                print("Record saved.")
+                break
+    except EOFError:
+        print("Record not found.")
                     
-            
-    
     f.close()
 
     
 #Delete student record
 def delete():
-    f=open("stud.dat","ab")
-
-
+    roll = int(input("Enter roll number to delete: "))
     
-    f.close()
+    data = []
+
+    try:
+        with open("stud.dat", "rb") as f:
+            while True:
+                data.append(pickle.load(f))
+    except EOFError:
+        pass
+
+    new_data = []
+    found = False
+
+    for record in data:
+        if record[0] != roll:
+            new_data.append(record)
+        else:
+            found = True
+
+    with open("stud.dat", "wb") as f:
+        for record in new_data:
+            pickle.dump(record, f)
+
+    if found:
+        print("Record deleted successfully!")
+    else:
+        print("Record not found.")
 
     
 

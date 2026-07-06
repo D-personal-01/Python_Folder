@@ -11,10 +11,47 @@
 # Employee representation using a class
 
 class Emp:
-    name = "John Doe"
-    occupation = "Software Engineer"
 
-print(f"Employee Name: {Emp.name}\nOccupation: {Emp.occupation}")
+    # Static variable to keep track of the employee number
+    company_name = "ABC_Co-op"
+    occupation=""
 
+    # Constructor method to initialize the attributes of the Employee class
+    def __init__(self, name, position, occupation, salary, IQ, EQ, total_projects, num_success_projects):
+
+        self.name = name
+        self.position = position
+        self.occupation = occupation
+        self.salary = salary
+        self.IQ= IQ
+        self.EQ= EQ
+        self.total_projects = total_projects
+        self.num_success_projects = num_success_projects
+        self.proj_success_rate = 100*(num_success_projects / total_projects if total_projects > 0 else 0)
+        self.employee_rating= ((self.IQ + self.EQ) / 2 + self.proj_success_rate)/10
+
+
+    def display_info(self):
+
+        print(f"Company: {Emp.company_name}")
+        print(f"Name: {self.name}")
+        print(f"Position: {self.position}")
+        print(f"Occupation: {self.occupation}")
+        print(f"Salary: ${self.salary}")
+        print(f"Employee Rating: {self.employee_rating}")
+
+# Creating objects (instances) of the Employee class
+a=Emp("A","Accountant","CA",50000,120,80,10,7)
+b=Emp("B","Manager","BCA",60000,130,90,15,12)
+c=Emp("C","Developer","B.tech",55000,125,85,8,6)
+
+# Updating the attributes of the objects
+a.salary=55000
+b.position="Senior Manager"
+
+# Displaying the information of each employee using the display_info method
+a.display_info()
+b.display_info()
+c.display_info()
 
 

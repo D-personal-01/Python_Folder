@@ -39,6 +39,8 @@ class Emp:
         print(f"Occupation: {self.occupation}")
         print(f"Salary: ${self.salary}")
         print(f"Employee Rating: {self.employee_rating}")
+        print()
+        print()
 
 # Creating objects (instances) of the Employee class
 a=Emp("A","Accountant","CA",50000,120,80,10,7)

@@ -11,29 +11,10 @@
 # Employee representation using a class
 
 class Emp:
+    name = "John Doe"
+    occupation = "Software Engineer"
 
-    def __init__(self, name, position, occupation, salary):
-        self.name = name
-        self.position = position
-        self.occupation = occupation
-        self.salary = salary
+print(f"Employee Name: {Emp.name}\nOccupation: {Emp.occupation}")
 
-    def display_info(self):
-        print(f"Name: {self.name}")
-        print(f"Position: {self.position}")
-        print(f"Occupation: {self.occupation}")
-        print(f"Salary: ${self.salary}")
-        print()
 
-# Creating objects (instances) of the Employee class
-A=Emp("A","Accountant","CA",50000)
-B=Emp("B","Manager","BCA",60000)
-C=Emp("C","Developer","B.tech",55000)
-      
-A.salary=55000
-B.position="Senior Manager"
-
-A.display_info()
-B.display_info()
-C.display_info()
 

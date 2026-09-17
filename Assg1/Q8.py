@@ -8,7 +8,7 @@ b = input("Enter replacement word: ")
 
 w = s.split()
 for i, word in enumerate(w):
-    if word == a:
+    if word in a:
         w[i] = b
 
 res = " ".join(w)

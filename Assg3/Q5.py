@@ -6,12 +6,11 @@ SEM 3 SHIFT 1
 import csv
 
 def create_csv(fn):
-    rows = [
-        ["ID", "Name", "Price"],
+    rows = [   ["ID", "Name", "Price"],
         [101, "Monitor", 12000],
         [102, "Mouse", 500],
-        [103, "Keyboard", 1500]
-    ]
+        [103, "Keyboard", 1500]   ]
+
     with open(fn, "w", newline="") as f:
         w = csv.writer(f)
         w.writerows(rows)

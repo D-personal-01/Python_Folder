@@ -10,8 +10,8 @@ def calc_sum(*vals):
     return s
 
 a, b, c, d = 5, 10, 15, 20
-tot = calc_sum(a, b, c, d)
+t = calc_sum(a, b, c, d)
 
-print("Formal argument: *vals inside calc_sum")
+print("Formal argument: values inside calc_sum")
 print(f"Actual arguments: {a}, {b}, {c}, {d}")
-print("Sum =", tot)
+print("Sum =", t)

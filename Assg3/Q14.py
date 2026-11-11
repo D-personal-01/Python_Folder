@@ -5,7 +5,7 @@ SEM 3 SHIFT 1
 
 import matplotlib.pyplot as plt
 
-dept = ["BCA", "BBA", "B.Com", "B.Sc", "BJMC"]
+dept = ["BCA", "BBA", "B.Com", "B.Sc", "B.Tech"]
 stud = [120, 95, 80, 110, 85]
 
 plt.bar(dept, stud, color="skyblue", edgecolor="navy")

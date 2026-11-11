@@ -1,7 +1,8 @@
 ''' NAME- Daksh Joshi 
 ENROLLMENT NUMBER- 01414002025  
 SEM 3 SHIFT 1
-1. Write a Python function that accepts a list of numbers and returns a new list containing only the even numbers. Use both default and keyword arguments in your function call. '''
+1. Write a Python function that accepts a list of numbers and returns a new list containing 
+only the even numbers. Use both default and keyword arguments in your function call. '''
 
 def get_evens(nums, lim=None):
     res = []

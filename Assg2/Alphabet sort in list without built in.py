@@ -1,5 +1,7 @@
-#Q7. Given a list of words, sort them in alphabetical order using list methods without using the built-in sorted() function.
-
+'''
+Name:Daksh Joshi   En.No: 01414002025
+Q7. Given a list of words, sort them in alphabetical order using list methods without using the built-in sorted() function.
+'''
 def alphasort(l1):
     l2 = l1.copy()  
     r = []

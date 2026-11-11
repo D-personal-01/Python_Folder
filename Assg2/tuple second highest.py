@@ -1,4 +1,7 @@
-#Q10. Write a Python script to take 5 tuples as input from the user (each with 2 elements) and store them in a list. Then find the tuple with the highest second value. 
+'''
+Name:Daksh Joshi   En.No: 01414002025
+Q10. Write a Python script to take 5 tuples as input from the user (each with 2 elements) and store them in a list. Then find the tuple with the highest second value. 
+'''
 
 a=eval(input("Enter a tuple with 2 values:"))
 b=eval(input("Enter a tuple with 2 values:"))

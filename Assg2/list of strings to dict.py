@@ -1,4 +1,7 @@
-#Q3. Write a Python function that accepts a list of strings and returns a dictionary with each string as the key and its length as the value. 
+'''
+Name:Daksh Joshi   En.No: 01414002025
+Q3. Write a Python function that accepts a list of strings and returns a dictionary with each string as the key and its length as the value. 
+'''
 
 def strtodict(s1):
     print(s1)
